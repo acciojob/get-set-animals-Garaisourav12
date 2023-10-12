@@ -9,7 +9,7 @@ class Animal {
   }
 
   makeSound() {
-    console.log('Sound');
+    console.log(`The ${this.species} makes a sound`);
   }
 }
 
@@ -26,17 +26,14 @@ class Dog extends Animal {
 }
 
 // Create instances of the Cat and Dog classes
-const cat = new Cat("Domestic Cat");
-const dog = new Dog("German Shepherd");
-
-// Access the species using the getter
-console.log(`Cat species: ${cat.species}`);
-console.log(`Dog species: ${dog.species}`);
+const cat = new Cat("Siamese");
+const dog = new Dog("Golden Retriever");
 
 // Make sounds
 cat.purr(); // Outputs: purr
+cat.makeSound();
 dog.bark(); // Outputs: woof
-
+dog.makeSound();
 
 // Do not change the code below this line
 window.Animal = Animal;
